@@ -1,0 +1,84 @@
+@import "src/styles/variables";
+@import "src/styles/shared";
+
+.goodsPage {
+  padding: 12vh 3% 60px 3%;
+}
+
+.goodsPage__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px 0 20px;
+}
+
+.search {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputSearch {
+  width: 30vw;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  z-index: 1;
+  color: $color-secondary-medium;
+}
+
+.buttonCancel,
+.buttonSearch {
+  font-size: 22px;
+}
+
+.buttonCancel {
+  position: absolute;
+  top: 10px;
+  left: -25px;
+  box-shadow: $box-shadow-good;
+}
+
+.messageNotFound {
+  color: $color-basic-medium;
+  font-size: 2.5em;
+  margin-top: 60px;
+}
+
+.dropMargin {
+  margin-left: 15px;
+}
+
+.input {
+  outline: none;
+  border: 1px solid $color-basic-medium;
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: $box-shadow-good;
+
+  &:focus {
+    color: $color-basic-medium;
+  }
+}
+
+@media (max-width: 400px) {
+  .goodsPage {
+    padding: 10vh 3% 60px 3%;
+  }
+
+  .goodsPage__search {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inputSearch {
+    width: 240px;
+  }
+
+  .dropMargin {
+    margin-left: 0;
+  }
+}

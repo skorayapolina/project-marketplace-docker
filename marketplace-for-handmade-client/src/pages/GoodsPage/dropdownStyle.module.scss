@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.drop {
+  box-shadow: $box-shadow-good;
+  margin-bottom: 20px;
+  border-radius: 20px;
+
+  .dropControl {
+    border: 1px solid $color-basic-medium;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: white;
+    min-width: 240px;
+    height: 40px;
+    text-align: left;
+    color: #6b6b6b;
+  }
+
+  .dropMenu {
+    border-color: $color-basic-medium;
+    border-radius: 20px;
+  }
+
+  .dropArrow {
+    margin-top: 3px;
+    margin-right: 5px;
+  }
+}

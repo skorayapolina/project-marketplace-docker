@@ -1,0 +1,25 @@
+@import "../../styles/variables";
+@import "../../styles/shared";
+
+.pagination {
+  display: flex;
+  @extend %center;
+  padding-top: 20px;
+}
+
+.pagination__buttonsPage {
+  display: flex;
+  padding: 0 20px;
+}
+.buttonPage {
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  margin-right: 5px;
+  background-color: $color-basic-light;
+}
+
+.currentButtonPage {
+  color: $color-basic-light;
+  background-color: $color-secondary-medium;
+}

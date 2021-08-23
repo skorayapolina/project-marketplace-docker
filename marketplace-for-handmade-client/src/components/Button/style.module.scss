@@ -1,0 +1,96 @@
+@import "src/styles/variables";
+@import "src/styles/shared";
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &__primary {
+    background-color: $color-basic-medium;
+    color: $color-basic-light;
+    box-shadow: $box-shadow-good;
+
+    &:hover:enabled {
+      background: $color-basic-dark;
+      box-shadow: $box-shadow-good-hover;
+      transition: background-color 200ms;
+    }
+
+    &:active:enabled {
+      background: #0b2430;
+      box-shadow: $box-shadow-good-active;
+    }
+
+    &:disabled {
+      background-color: #89a4ad;
+      box-shadow: none;
+    }
+  }
+
+  &__small {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: white;
+    color: $color-secondary-medium;
+    font-size: 10px;
+
+    display: flex;
+    @extend %center;
+
+    &:hover:enabled {
+      color: $color-secondary-light;
+      background-color: $color-basic-light;
+      transition: background-color 250ms;
+    }
+
+    &:active:enabled {
+      color: $color-secondary-light;
+      background-color: $color-basic-light;
+    }
+
+    &:disabled {
+      color: #c2c2c2;
+    }
+  }
+
+  &__medium {
+    padding: 0;
+    background-color: inherit;
+    color: $color-secondary-medium;
+    font-size: 20px;
+
+    display: flex;
+    @extend %center;
+
+    &:hover:enabled {
+      color: $color-secondary-light;
+      transition: color 250ms;
+    }
+
+    &:active:enabled {
+    }
+
+    &:disabled {
+      background-color: #4d4e4e;
+    }
+  }
+
+  &__text {
+    background-color: transparent;
+    color: #8798ad;
+  }
+}

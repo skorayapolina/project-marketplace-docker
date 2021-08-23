@@ -1,0 +1,154 @@
+@import "src/styles/variables";
+@import "src/styles/shared";
+
+.profileContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 5% 0 5%;
+
+  position: relative;
+}
+
+.profileContainer__header {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+}
+
+.profileContainer__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.success {
+  color: rgba(0, 0, 254, 0.66);
+}
+
+.profileContainer__title {
+  font-size: $font-size-title;
+  font-weight: 500;
+  padding-left: 80px;
+  margin: 0 auto;
+}
+
+.profileContainer__form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  background-color: $color-secondary-light;
+  box-shadow: $box-shadow-good;
+  height: auto;
+  padding: 25px;
+  border-radius: 20px;
+  margin: 40px auto;
+}
+
+.profileContainer__formTitle {
+  font-size: $font-size-medium;
+}
+
+.profileContainer__input {
+  margin-top: 20px;
+}
+
+.profileContainer__textarea {
+  resize: none;
+  margin-bottom: 20px;
+  font-size: $font-size-small;
+  height: 100px;
+}
+
+.shopName {
+  font-size: $font-size-title;
+  text-align: left;
+  padding: 20px 0 0 20px;
+}
+
+.profileContainer__message {
+  display: flex;
+  flex-direction: column;
+  @extend %center;
+  padding-top: 60px;
+}
+
+.profileContainer__messageText {
+  font-size: $font-size-sub-title;
+}
+
+.input {
+  outline: none;
+  border: 1px solid $color-basic-medium;
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: $box-shadow-good;
+
+  &:focus {
+    color: $color-basic-medium;
+  }
+}
+
+.inputLogo {
+  display: contents;
+  z-index: -1;
+}
+
+.labelLogo {
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  width: 150px;
+  height: 30px;
+
+  margin-left: 10px;
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+
+  background-color: $color-basic-medium;
+  color: $color-basic-light;
+  box-shadow: $box-shadow-good;
+
+  &:hover {
+    background: $color-basic-dark;
+    box-shadow: $box-shadow-good-hover;
+    transition: background-color 200ms;
+  }
+
+  &:active {
+    background: #0b2430;
+    box-shadow: $box-shadow-good-active;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+}
+
+.formLogo {
+  height: 100%;
+  object-fit: cover;
+}
+
+.logoContainer {
+  display: flex;
+  @extend %center;
+  min-height: 60px;
+  margin-bottom: 15px;
+}
+
+.fileInputs__text {
+  margin: 10px 0;
+}
+
+.fileInputs {
+  display: flex;
+  align-items: center;
+}
+

@@ -1,0 +1,50 @@
+@import "src/styles/shared";
+@import "src/styles/variables";
+
+.adminPage {
+  font-size: 14px;
+  padding: 9vh 3% 0 3%;
+}
+
+.gridContainer {
+  border: 1px solid black;
+  margin: 0 40px 15px 40px;
+  overflow: scroll;
+}
+
+.gridRow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  border-bottom: 1px solid gray;
+  padding: 10px 5px;
+}
+
+.orderList {
+  border-right: 1px solid $color-basic-dark;
+  border-left: 1px solid $color-basic-dark;
+  margin: 5px 0;
+}
+
+.buttonDeleteUser {
+  box-shadow: none;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: darken($color-secondary-light, 20%);
+}
+
+.button.buttonDeleteUser:hover:enabled {
+  box-shadow: none;
+  background-color: $color-button-liked;
+}
+
+.tableTitle {
+  font-size: $font-size-sub-title;
+  padding: 15px 0;
+}
+
+@media (max-width: 400px) {
+  .gridContainer {
+    margin: 0 15px 15px 15px;
+  }
+}
+

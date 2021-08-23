@@ -1,0 +1,4 @@
+.vscode/
+.idea/
+.ci/
+node_modules/

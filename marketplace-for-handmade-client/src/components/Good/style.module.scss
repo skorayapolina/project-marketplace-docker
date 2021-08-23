@@ -1,0 +1,235 @@
+@import "../../styles/variables";
+
+.good {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: $box-shadow-good;
+  padding: 8px;
+  position: relative;
+  background-color: white;
+
+  border-radius: 10px;
+}
+
+.good:hover {
+  box-shadow: $box-shadow-good-hover;
+}
+
+.good:active {
+  animation-name: shadow;
+  animation-duration: 0.4s;
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: $box-shadow-good;
+  }
+  to {
+    box-shadow: $box-shadow-good-active;
+  }
+}
+
+.good__about {
+  margin: 0 10px;
+}
+
+.good__linkImage {
+  display: inline-block;
+}
+
+.good__image img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  margin-bottom: 8px;
+
+  border-radius: 11px;
+  background: #efefef;
+  box-shadow: inset 5px 5px 6px #dcdcdc, inset -5px -5px 6px #ffffff;
+}
+
+.good__info {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.good__title {
+  font-size: $font-size-sub-title;
+  font-weight: 500;
+}
+
+.good__link {
+  color: $color-basic-dark;
+}
+
+.good__link:hover {
+  color: $color-secondary-medium;
+}
+
+.good__link:active {
+  color: $color-secondary-medium;
+}
+
+.good__likes {
+  text-align: left;
+}
+
+.good__buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -5px;
+  padding-bottom: 3px;
+  min-height: 5px;
+}
+
+.updateGoodForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  background-color: $color-secondary-light;
+  box-shadow: $box-shadow-good;
+  border-radius: 20px;
+  padding: 30px 10px;
+}
+
+.updateGoodForm__input {
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.updateGoodForm__textarea {
+  height: 120px;
+  resize: none;
+}
+
+.buttonClose {
+  position: absolute;
+  top: 12px;
+  left: 305px;
+  font-size: 22px;
+}
+
+.moneyIcon {
+  font-size: 14px;
+}
+
+.messageError {
+  margin-top: -5px;
+  margin-bottom: 15px;
+  color: $color-button-liked;
+  font-size: 12px;
+  height: 7px;
+}
+
+.buttonUpdate {
+  margin-top: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 500ms ease;
+  background-color: rgba(0, 0, 0, 0.40);
+  border-radius: 10px;
+}
+
+.good:hover .overlay {
+  opacity: 1;
+}
+
+.overlay__text {
+  color: white;
+  font-size: $font-size-medium;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 75%;
+}
+
+.overlay__message {
+  margin-top: 20px;
+}
+
+.overlay__shopName {
+  margin-bottom: 20px;
+}
+
+.overlay__shopName:hover {
+  color: $color-secondary-light;
+}
+
+.overlay__shopName:active {
+  color: $color-secondary-medium;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  width: 80px;
+  background-color: $color-basic-dark;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -40px;
+
+  margin-bottom: 8px;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $color-basic-dark transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.input {
+  outline: none;
+  border: 1px solid $color-basic-medium;
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: $box-shadow-good;
+
+  &:focus {
+    color: $color-basic-medium;
+  }
+}
+
+@media (max-width: 400px) {
+  .good {
+    margin-bottom: 20px;
+  }
+}

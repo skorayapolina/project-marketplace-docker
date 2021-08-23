@@ -1,0 +1,313 @@
+@import "src/styles/variables";
+@import "../../styles/shared";
+
+.sellerPage {
+  padding: calc(8vh + 20px) 20px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.sellerPage__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sellerPage__backImage {
+  background-image: url("../../static/images/background-for-shop.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 200px;
+
+  position: relative;
+}
+
+.sellerPage__logo {
+  background-color: $color-basic-light;
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  position: absolute;
+  top: 140px;
+  left: 40px;
+}
+
+.sellerPage__logoImg {
+  height: 80%;
+  width: 80%;
+}
+
+.sellerPage__text {
+}
+
+.sellerPage__textField {
+  font-size: $font-size-medium;
+}
+
+.sellerPage__textField_name {
+  font-family: 'Amaranth', sans-serif;
+  font-size: 2.5em;
+  margin: 15px;
+  font-weight: 500;
+}
+
+.sellerPage__description {
+  line-height: 1.4;
+  max-width: 550px;
+  font-size: $font-size-medium;
+  font-weight: 500;
+}
+
+.buttonShowModal {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.createGoodForm {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  @extend %center;
+  width: 600px;
+  background-color: $color-secondary-light;
+  box-shadow: $box-shadow-good;
+  border-radius: 20px;
+  padding: 30px;
+
+  position: fixed;
+  top: 400px;
+  right: -600px;
+  opacity: 0;
+
+  transition: top 500ms ease-in-out, right 500ms ease-in-out,
+    opacity 200ms ease-in-out;
+}
+
+.createGoodForm__show {
+  right: 20px;
+  top: 10px;
+  opacity: 1;
+  transition: top 500ms ease-in-out, right 500ms ease-in-out,
+    opacity 200ms ease-in-out;
+}
+
+.createGoodForm__input {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.createGoodForm__textarea {
+  height: 180px;
+  resize: none;
+
+  font-size: $font-size-small;
+}
+
+.createGoodForm__buttonClose {
+  position: absolute;
+  top: 12px;
+  left: 565px;
+  font-size: 22px;
+}
+
+.createGoodContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -100px;
+}
+
+.messageError {
+  display: block;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  color: $color-button-liked;
+  font-size: 12px;
+  height: 7px;
+}
+
+.formContent {
+  display: flex;
+}
+
+.formTextInfo {
+  min-width: 300px;
+  padding-right: 30px;
+}
+
+.fileInputs {
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrap {
+  height: 100px;
+  width: 100px;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.formImage {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.inputPhotos,
+.inputImage {
+  display: contents;
+  z-index: -1;
+}
+
+.inputImage {
+  padding-bottom: 80px;
+}
+
+.labelPhotos,
+.labelImage {
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  width: 150px;
+
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+
+  background-color: $color-basic-medium;
+  color: $color-basic-light;
+  box-shadow: $box-shadow-good;
+
+  &:hover {
+    background: $color-basic-dark;
+    box-shadow: $box-shadow-good-hover;
+    transition: background-color 200ms;
+  }
+
+  &:active {
+    background: #0b2430;
+    box-shadow: $box-shadow-good-active;
+  }
+}
+
+.image {
+  min-height: 110px;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fileInputs__text {
+  text-align: left;
+  font-size: $font-size-medium;
+  margin-bottom: 10px;
+}
+
+.formTitle {
+  font-size: $font-size-medium;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.input {
+  outline: none;
+  border: 1px solid $color-basic-medium;
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: $box-shadow-good;
+
+  &:focus {
+    color: $color-basic-medium;
+  }
+}
+
+@media (max-width: 400px) {
+  .sellerPage__logo {
+    position: absolute;
+  }
+  .sellerPage__info {
+    text-align: center;
+  }
+
+  .sellerPage__description {
+    width: auto;
+  }
+
+  .sellerPage__backImage {
+    height: 150px;
+
+    position: relative;
+  }
+
+  .sellerPage__logo {
+    top: 140px;
+    left: 20px;
+  }
+
+  .createGoodForm {
+    width: unset;
+    padding: 10px 20px;
+  }
+
+  .formContent {
+    flex-direction: column;
+  }
+
+  .createGoodForm__buttonClose {
+    position: absolute;
+    top: 12px;
+    font-size: 22px;
+  }
+
+  .formTextInfo {
+    min-width: unset;
+    padding-right: 0;
+  }
+
+  .fileInputs {
+    min-height: 80px;
+    align-items: center;
+  }
+
+  .photos {
+    width: 155px;
+    height: 155px;
+    margin-bottom: 10px;
+  }
+
+  .imageWrap {
+    height: 70px;
+    width: 70px;
+    margin: 3px;
+  }
+
+  .formImage {
+    height: 70px;
+  }
+
+  .createGoodForm__textarea {
+    height: 120px;
+  }
+
+  .createGoodForm__buttonClose {
+    position: absolute;
+    top: 10px;
+    left: 250px;
+    font-size: 22px;
+  }
+}

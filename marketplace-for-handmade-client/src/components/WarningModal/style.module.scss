@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+.modal {
+  background-color: $color-secondary-light;
+  padding: 40px;
+  border-radius: 15px;
+
+  margin: 40px 0 0 80px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  font-size: $font-size-sub-title;
+
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: $font-size-medium;
+}
+
+.btn {
+  &:not(:last-of-type) {
+    margin-right: 15px;
+  }
+}

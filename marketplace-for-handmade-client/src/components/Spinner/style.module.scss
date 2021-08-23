@@ -1,0 +1,76 @@
+@import "src/styles/variables";
+@import "src/styles/shared";
+
+.container {
+  @extend %center;
+
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+
+  padding-top: 25vh;
+}
+
+.inComponent {
+  padding-top: 140px;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  z-index: 999;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.spinner {
+  perspective: 1000px;
+}
+
+.circle,
+.line {
+  width: 170px;
+  height: 170px;
+  border: 3px solid $color-basic-medium;
+  border-radius: 50%;
+}
+
+.circle {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spinn 5s infinite linear;
+}
+
+.line {
+  display: block;
+  position: absolute;
+  top: -5px;
+  right: 0;
+  bottom: 0;
+  left: -5px;
+
+  &:nth-child(1) {
+    transform: rotateY(36deg);
+  }
+  &:nth-child(2) {
+    transform: rotateY(72deg);
+  }
+  &:nth-child(3) {
+    transform: rotateY(108deg);
+  }
+  &:nth-child(4) {
+    transform: rotateY(144deg);
+  }
+}
+
+@keyframes spinn {
+  100% {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}

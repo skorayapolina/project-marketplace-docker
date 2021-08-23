@@ -1,0 +1,103 @@
+@import "../../styles/variables";
+@import "../../styles/shared";
+
+.order {
+  display: flex;
+  box-shadow: $box-shadow-good;
+  padding: 8px;
+  background-color: white;
+}
+
+.order_dark {
+  background-color: rgb(237, 237, 237);
+}
+
+.order__image {
+  width: 50%;
+}
+
+.order__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.order__about {
+  text-align: left;
+  line-height: 1.5;
+  padding-left: 8px;
+}
+
+.order__info {
+  display: flex;
+  flex-direction: column;
+  font-size: $font-size-medium;
+  line-height: 1.5;
+}
+
+.order__title {
+  font-size: $font-size-medium;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.order__link {
+  color: $color-basic-dark;
+}
+
+.order__link:hover {
+  color: $color-secondary-medium;
+  transition: color 250ms;
+}
+
+.order__link:active {
+  color: $color-secondary-medium;
+}
+
+.order:hover {
+  box-shadow: $box-shadow-good-hover;
+}
+
+.order:active {
+  animation-name: shadow;
+  animation-duration: 0.4s;
+}
+
+@keyframes shadow {
+  from {
+    box-shadow: $box-shadow-good;
+  }
+  to {
+    box-shadow: $box-shadow-good-active;
+  }
+}
+
+.order__buttonDone {
+  line-height: 1;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.doneIcon {
+  font-size: 18px;
+}
+.acceptIcon {
+  font-size: 13px;
+}
+
+.order__status {
+  display: flex;
+  height: 30px;
+  align-items: center;
+}
+
+.order__statusButton {
+  margin: 5px;
+}
+
+@media (max-width: 400px) {
+  .order {
+    margin-bottom: 20px;
+  }
+}

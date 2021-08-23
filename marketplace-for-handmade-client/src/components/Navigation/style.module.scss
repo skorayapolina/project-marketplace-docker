@@ -1,0 +1,149 @@
+@import "src/styles/variables";
+@import "src/styles/shared";
+
+.navigation__list {
+  display: flex;
+  background-color: $color-basic-light;
+  height: 8%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: $box-shadow-good;
+}
+
+.navigation__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation__link {
+  color: $color-basic-dark;
+  font-size: $font-size-medium;
+  font-weight: 500;
+  margin: 0 15px;
+}
+
+.navigation__link_full {
+  height: 7vh;
+  padding: 2vh 25px 0 25px;
+  margin: 0;
+}
+
+.navigation__link:hover {
+  color: $color-secondary-medium;
+  transition: color 250ms;
+}
+
+.navigation__image {
+  height: 8vh;
+  width: auto;
+}
+
+.basketButtons {
+  display: flex;
+  padding: 2vh;
+}
+
+.navigation__userName {
+  font-size: $font-size-medium;
+  margin-left: 20px;
+}
+
+.dropbtn {
+  display: flex;
+  @extend %center;
+  background-color: $color-basic-light;
+  font-size: $font-size-medium;
+  border: none;
+  height: 7vh;
+  padding: 0 20px;
+  min-width: 110px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent .navigation__link {
+  padding: 12px 16px;
+  display: block;
+}
+
+.dropdownContent .navigation__link {
+  margin: 0;
+}
+
+.dropdownContent .navigation__link:hover {
+  color: $color-secondary-medium;
+}
+
+.dropdownContent a:hover {
+  background-color: $color-basic-light;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: $color-secondary-medium;
+}
+
+.activeLink {
+  color: $color-secondary-medium;
+  background-color: darken($color-basic-light, 5%);
+  border-radius: 5px;
+}
+
+.localeBtn {
+  position: absolute;
+  top: 94vh;
+  left: 3px;
+  background-color: $color-basic-light;
+  padding: 4px;
+  border-radius: 5px;
+  min-width: 50px;
+  display: flex;
+  @extend %center;
+}
+
+.btnToggleMenu {
+  display: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: inherit;
+}
+
+@media (max-width: 400px) {
+  .hideMenu {
+    display: none;
+  }
+
+  .navigation__list {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .btnToggleMenu {
+    display: block;
+
+  }
+}

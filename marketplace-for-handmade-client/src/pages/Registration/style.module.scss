@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+@import "../../styles/shared";
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  @extend %center;
+  height: 100vh;
+}
+
+.input.registrationInput {
+  width: 80%;
+  &:focus {
+    border: 1px solid $color-basic-dark;
+  }
+}
+
+.linkToLog {
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+.formTitle {
+  font-size: $font-size-sub-title;
+}
+
+.formLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: $color-secondary-light;
+  width: 350px;
+  height: 340px;
+
+  box-shadow: $box-shadow-good;
+}
+
+.messageError {
+  margin-top: -7px;
+  color: $color-button-liked;
+  font-size: 12px;
+  height: 7px;
+}
+
+.buttonSign {
+  width: 95px;
+}
+
+.input {
+  outline: none;
+  border: 1px solid $color-basic-medium;
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: $box-shadow-good;
+
+  &:focus {
+    color: $color-basic-medium;
+  }
+}

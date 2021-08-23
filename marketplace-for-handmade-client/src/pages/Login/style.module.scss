@@ -1,0 +1,64 @@
+@import "../../styles/variables";
+@import "../../styles/shared";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  @extend %center;
+  height: 100vh;
+}
+
+.formLog {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: $color-secondary-light;
+  width: 350px;
+  height: 300px;
+
+  box-shadow: $box-shadow-good;
+}
+
+.input.loginInput {
+  width: 80%;
+  margin: 0;
+  &:focus {
+    border: 1px solid $color-basic-dark;
+  }
+}
+
+.input {
+  outline: none;
+  border: 1px solid $color-basic-medium;
+  border-radius: 20px;
+  padding: 10px 15px;
+  box-shadow: $box-shadow-good;
+
+  &:focus {
+    color: $color-basic-medium;
+  }
+}
+
+.messageError {
+  margin-top: -7px;
+  color: $color-button-liked;
+  font-size: 12px;
+  height: 7px;
+}
+
+.linkToRegistr {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.buttonSign {
+  width: 95px;
+}
+
+.loginForm__title {
+  font-size: $font-size-sub-title;
+}

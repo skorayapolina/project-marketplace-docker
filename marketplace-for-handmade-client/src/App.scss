@@ -1,0 +1,71 @@
+@import "styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  color: #05161d;
+}
+
+.transition-group {
+  position: relative;
+}
+.route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fadePage-enter {
+  opacity: 0;
+}
+.fadePage-enter.fadePage-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fadePage-exit {
+  opacity: 1;
+}
+
+.fadePage-exit.fadePage-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.rc-dialog-root {
+  position: absolute;
+  top: 20vh;
+  left: 35vw;
+  display: flex;
+  z-index: 999;
+}

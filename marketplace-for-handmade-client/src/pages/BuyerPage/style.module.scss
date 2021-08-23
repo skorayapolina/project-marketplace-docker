@@ -1,0 +1,101 @@
+@import "src/styles/variables";
+@import "../../styles/shared";
+
+.profileContainer {
+  display: flex;
+  padding-top: 7vh;
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+
+.profileContainer__aside {
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 15%;
+  background-color: #efefef;
+  min-height: 100vh;
+}
+
+.profileContainer__main {
+  flex-basis: 100%;
+}
+
+.basketContainer__cost {
+  font-size: $font-size-title;
+  text-align: left;
+  margin: 20px 20px 10px 20px;
+}
+
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.emptyMessage {
+  width: 200px;
+  text-align: left;
+  font-size: $font-size-medium;
+  margin-bottom: 10px;
+}
+
+.imgShoppingCart {
+  height: 200px;
+  width: auto;
+}
+
+.menu {
+  background-color: rgba(88, 167, 198, 0.71);
+  position: fixed;
+  top: 10vh;
+  left: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 15px;
+  height: 120px;
+  width: 120px;
+
+  border-radius: 20px;
+  box-shadow: inset $box-shadow-good;
+}
+
+.menu:hover {
+  background-color: darken(rgba(88, 167, 198, 0.71), 10%);
+  transition: background-color 600ms ease-in-out;
+}
+
+.profileContainer__link:hover {
+  color: $color-secondary-light;
+  transition: color 250ms;
+}
+
+.ordersContainer__emptyMessage {
+  display: flex;
+  flex-direction: column;
+  @extend %center;
+  margin: 40px 0;
+}
+
+.ordersContainer__emptyMessageTitle {
+  font-size: $font-size-title;
+}
+
+.ordersContainer__emptyMessageText {
+  font-size: 18px;
+  padding: 20px 0;
+  width: 200px;
+}
+
+@media (max-width: 400px) {
+  .profileContainer {
+    padding-top: 5vh;
+  }
+
+  .profileContainer__aside {
+    display: none;
+  }
+}

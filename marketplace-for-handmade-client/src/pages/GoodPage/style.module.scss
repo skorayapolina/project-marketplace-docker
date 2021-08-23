@@ -1,0 +1,349 @@
+@import "src/styles/variables";
+@import "src/styles/shared";
+
+.content {
+  text-align: center;
+  display: flex;
+  @extend %center;
+}
+
+.shopName {
+  font-size: $font-size-title;
+}
+
+.shopLink {
+  display: block;
+  color: $color-basic-dark;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.shopDescription {
+  line-height: 1.5;
+  font-size: $font-size-medium;
+  width: 50%;
+  margin: 15px 0;
+}
+
+.goodPage__section {
+  height: 92vh;
+  transform-style: preserve-3d;
+
+  position: sticky;
+  top: 8vh;
+  left: 0;
+
+  padding: 40px;
+}
+
+.goodPage__sectionGood {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 8vh;
+  margin-bottom: 8vh;
+  background-color: lighten($color-secondary-light, 20%);
+
+  background-image: radial-gradient(white 15%, transparent 16%),
+    radial-gradient(white 15%, transparent 16%);
+  background-size: 60px 60px;
+}
+
+.goodPage__sectionDescription {
+  background-color: lighten($color-secondary-light, 17%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.goodPage__sectionShop {
+  background-color: lighten($color-secondary-light, 10%);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.goodOptions__name {
+  font-size: $font-size-title;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.goodPage__info {
+  display: flex;
+  height: 92vh;
+}
+
+.goodPage__infoLeft {
+  flex-basis: 55%;
+  background-color: rgba(46, 107, 134, 0.8);
+  @extend %center;
+}
+
+.image__div {
+  box-shadow: $box-shadow-good;
+  border-radius: 20px;
+  width: 30vw;
+  height: 30vw;
+
+  position: relative;
+  margin-right: 40px;
+}
+
+.buttonLike__div {
+  position: absolute;
+  top: -8px;
+  left: 95%;
+}
+
+.goodPage__infoRight {
+  display: flex;
+  @extend %center;
+  flex-basis: 45%;
+
+  background-color: rgba(47, 111, 137, 0.21);
+}
+
+.goodOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.goodPage__image {
+  border-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.goodPage__price {
+  display: flex;
+  font-size: $font-size-small;
+  font-weight: 500;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceNumber {
+  margin-left: 10px;
+  font-size: $font-size-title;
+}
+
+.goodPage__buttons {
+  display: flex;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.buttonAddToBasket {
+  width: 150px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: lighten($color-basic-medium, 10%);
+}
+
+.goodPage__description {
+  display: flex;
+  flex-direction: column;
+  @extend %center;
+
+  padding: 60px 40px;
+}
+
+.goodPage__descriptionTitle {
+  font-size: $font-size-title;
+}
+
+.goodPage__descriptionText {
+  line-height: 1.2;
+  width: 50%;
+  margin: 15px 0;
+  font-size: $font-size-medium;
+}
+
+.sellerGoods {
+  padding: 40px 0;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+
+.sellerGoods__good {
+  height: 15vw;
+  width: 15vw;
+  margin: 0 10px 10px 0;
+  box-shadow: $box-shadow-good;
+}
+
+.sellerGoods__good:hover {
+  transform: scale(1.07);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sellerGoods__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.itemsRow {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 50vh;
+
+  padding: 20px 280px;
+}
+
+.item {
+  margin: 2px;
+
+  flex: 1 1 20%;
+  transition: flex 0.5s ease-in-out;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.item:hover {
+  flex: 0.000000001 0.00000001 35%;
+  background-size: 100% 100%;
+}
+
+.buttonLike {
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: $font-size-small;
+}
+
+.buttonLike:hover {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  color: white;
+}
+
+.buttonLike:active {
+  animation-name: box-shadow-animation;
+  animation-duration: 0.5s;
+}
+
+.buttonLike_liked {
+  background-color: $color-button-liked;
+}
+
+.buttonLike_liked:hover {
+  background-color: $color-secondary-medium;
+}
+
+.buttonLike_unliked {
+  background-color: $color-secondary-medium;
+}
+
+.buttonLike_unliked:hover {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  background-color: $color-button-liked;
+  color: white;
+}
+
+@keyframes box-shadow-animation {
+  from {
+    box-shadow: rgba(80, 57, 76, 0.4) 0 0 0 3px;
+  }
+  to {
+    box-shadow: rgba(80, 57, 76, 0.1) 0 0 10px 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .itemsRow {
+    height: 200px;
+    padding: 20px;
+  }
+
+  .image__div {
+    width: 70vw;
+    height: 70vw;
+
+    margin-right: 0;
+  }
+
+  .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shopName {
+    font-size: 22px;
+  }
+  .goodOptions__name {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  .goodPage__price {
+    font-size: 12px;
+  }
+
+  .priceNumber {
+    font-size: 22px;
+  }
+  .goodPage__descriptionTitle {
+    font-size: 22px;
+  }
+
+  .goodPage__descriptionText {
+    font-size: 16px;
+    line-height: 1.2;
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .shopDescription {
+    line-height: 1.2;
+    font-size: 16px;
+    width: auto;
+    padding: 0 20px;
+  }
+
+  .buttonLike {
+    font-size: 14px;
+  }
+
+  .goodPage__section {
+    top: 8vh;
+    height: 92vh;
+    padding: 10px;
+  }
+
+  .goodPage__sectionGood {
+    margin-bottom: 15vh;
+  }
+
+  .sellerGoods {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sellerGoods__good {
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    box-shadow: $box-shadow-good;
+  }
+}

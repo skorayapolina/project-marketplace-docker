@@ -1,0 +1,29 @@
+@import "../../styles/shared";
+@import "../../styles/variables";
+
+.messageErrorNone {
+  visibility: hidden;
+}
+
+.messageError {
+  display: flex;
+  @extend %center;
+  height: 35px;
+  width: 100%;
+  border-top: 2px solid $color-button-liked;
+  padding: 7px;
+  border-bottom: 2px solid $color-button-liked;
+}
+
+.messageError__icon {
+  padding-right: 10px;
+}
+
+.warningIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.messageError__message {
+  font-size: $font-size-small;
+}
